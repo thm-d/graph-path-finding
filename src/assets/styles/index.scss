@@ -1,0 +1,92 @@
+@use "./variables";
+@use "./base";
+@use "./debug";
+@use "./themes";
+@use "./mixins";
+
+
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+}
+
+header {
+  width: 100%;
+  margin-bottom: 3rem;
+  background: var(--primary);
+  padding: 2rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+
+  a {
+    color: var(--primary);
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .header-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white);
+  }
+}
+
+
+canvas {
+  border: .1rem solid #ddd;
+  box-shadow: var(--box-shadow);
+  @include mixins.md {
+    height: 400px;
+    width: 400px;
+  }
+  @include mixins.sm-lt {
+    height: 300px;
+    width: 300px;
+  }
+}
+
+h1 {
+  margin-bottom: 5rem;
+  color: var(--primary);
+}
+
+.content {
+  display: flex;
+  @include mixins.sm-lt {
+    flex-direction: column;
+  }
+}
+
+ul {
+  margin-right: 4rem;
+  height: 16rem;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: var(--box-shadow);
+  @include mixins.sm-lt {
+    margin: 0 auto 3rem;
+  }
+}
+
+li {
+  margin: 0 2rem;
+  padding: .3rem 0;
+}

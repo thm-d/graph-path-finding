@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport"
+    >
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <title>Path Finding</title>
+  </head>
+  <body>
+    <header>
+      <a class="header-title" href="./index.html">Path Finding Algorithm</a>
+      <button id="restart" class="btn btn-reverse-primary">Restart</button>
+    </header>
+    <div class="content">
+      <ul class="card">
+        <li style="color: var(--red)">Starting block</li>
+        <li style="color: var(--green)">Arrival block</li>
+        <li style="color: var(--blue)">Visited block</li>
+        <li style="color: var(--pink)">Neighbouring block awaiting inspection</li>
+        <li style="color: var(--yellow)">Shortest path</li>
+      </ul>
+      <canvas height="500" id="canvas" width="500"></canvas>
+    </div>
+  </body>
+</html>

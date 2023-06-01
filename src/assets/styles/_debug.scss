@@ -1,0 +1,39 @@
+@use './mixins' as mixin;
+
+.b1 {
+  background-color: lightcoral;
+  border: 1px solid lightcoral;
+}
+
+.b2 {
+  background-color: lightseagreen;
+  border: 1px solid lightseagreen;
+}
+
+.b3 {
+  background-color: lightblue;
+  border: 1px solid lightblue;
+}
+
+.b4 {
+  background-color: lightgreen;
+  border: 1px solid lightgreen;
+}
+
+.br {
+  @include mixin.xs {
+    border: 2px solid red;
+  }
+  @include mixin.sm {
+    border: 2px solid green;
+  }
+  @include mixin.md {
+    border: 2px solid blue;
+  }
+  @include mixin.lg {
+    border: 2px solid orange;
+  }
+  @include mixin.xl {
+    border: 2px solid purple;
+  }
+}
