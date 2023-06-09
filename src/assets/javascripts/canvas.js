@@ -7,7 +7,7 @@ const drawSquare = (x, y, type, squareSize) => {
   ctx.strokeStyle = "#ddd";
   switch (type) {
     case 0:
-      ctx.fillStyle = "#4b4b4b";
+      ctx.fillStyle = "#333";
       break;
     case 1:
       ctx.fillStyle = "#f5f6fa";
@@ -49,7 +49,7 @@ export const drawFinalPath = (path, matrixSize) => {
   for (let i = 0; i < path.length - 1; i++) {
     if (i !== 0 && i !== path.length - 1) {
       const [ x, y ] = path[i].split("-").map(i => +i);
-      ctx.fillStyle = "#fff200";
+      ctx.fillStyle = "#f9ca24";
       ctx.strokeRect(x * squareSize, y * squareSize, squareSize, squareSize);
       ctx.fillRect(x * squareSize, y * squareSize, squareSize, squareSize);
     }
